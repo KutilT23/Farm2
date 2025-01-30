@@ -30,12 +30,28 @@ public class Farm {
         }
 
     }
+    public void buyFlower(String name){
+        name = name.toLowerCase();
+        switch (name){
+            case "carrot": player.setCurrency(player.getCurrency()-50);
+            player.addFlower(name);
+            break;
+            case "corn" : player.setCurrency(player.getCurrency()-75);
+            player.addFlower(name);
+            break;
+            case "cabbage" : player.setCurrency(player.getCurrency()-100);
+            player.addFlower(name);
+            break;
+            default:
+        }
+
+    }
     public void plantFlower(Flower flower){
             if(flower.neededArea+usedSpaceFarm <= farmSize&&farm.size()<5){
                 farm.add(flower);
                 usedSpaceFarm = usedSpaceFarm + flower.neededArea;
                 System.out.println("Successfully added flower");
-                player.setCurrency(player.getCurrency()-50);
+
 
             }else{
                 System.out.println("Failed to add flower");
@@ -57,16 +73,16 @@ public class Farm {
 
         }
     }
-    public void addAnimalsToBarn(){
 
-    }
-    public void buyAnimal(){
-
+    public void buyAnimal(Animal animal){
+    player.setCurrency(player.getCurrency()-100);
     }
     public void petAnimal(){
 
     }
-    public void sellAnimal(){
+    public void sellAnimal(Animal animal){
+        player.setCurrency(player.getCurrency()+150);
+
 
     }
 
