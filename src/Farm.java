@@ -34,13 +34,13 @@ public class Farm {
         name = name.toLowerCase();
         switch (name){
             case "carrot": player.setCurrency(player.getCurrency()-50);
-            player.addFlower(name);
+            player.addFlower(new Flower("Carrot",50,1){});
             break;
             case "corn" : player.setCurrency(player.getCurrency()-75);
-            player.addFlower(name);
+            player.addFlower(new Flower("Corn",50,1) {});
             break;
             case "cabbage" : player.setCurrency(player.getCurrency()-100);
-            player.addFlower(name);
+            player.addFlower(new Flower("Cabbage",50,1) {});
             break;
             default:
         }

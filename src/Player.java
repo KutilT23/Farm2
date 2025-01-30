@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class Player {
     private String name = "";
     private double currency = 1000;
-    private ArrayList<String>flowerOwnedInv = new ArrayList<>();
-    private ArrayList<String>animalOwnedInv = new ArrayList<>();
+    private ArrayList<Flower>flowerOwnedInv = new ArrayList<>();
+    private ArrayList<Animal>animalOwnedInv = new ArrayList<>();
 
     public double getCurrency() {
         return currency;
@@ -13,10 +13,10 @@ public class Player {
     public void setCurrency(double currency) {
         this.currency = currency;
     }
-    public void addFlower(String flower){
+    public void addFlower(Flower flower){
         flowerOwnedInv.add(flower);
     }
-    public void addAnimal(String animal){
+    public void addAnimal(Animal animal){
         animalOwnedInv.add(animal);
     }
 
